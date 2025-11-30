@@ -4,10 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>森森天氣</title>
-    <link rel="icon" type="image/png" href="./icon-v2.png">
-    <link rel="apple-touch-icon" href="./icon-v2.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./icon-v2.png">
+    <title>狸貓氣象站</title>
+    <!-- 狸貓氣象站 SVG 圖標 (已嵌入) -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjI1IiBmaWxsPSIjNEZCNUQ5Ii8+CiAgPGcgZGVjb3JhdGl2ZT0idHJ1ZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCwgNSkiPgogICAgPHBhdGggZD0iTTUwIDkwQzMwIDkwIDIwIDc1IDI1IDYwQzMwIDQ1IDcwIDQ1IDc1IDYwQzgwIDc1IDcwIDkwIDUwIDkwWiIgZmlsbD0iI0ZGRkVGMiIvPgogICAgPHBhdGggZD0iTTM1IDU1TDQwIDM1TDQ1IDU1Wk02NSA1NUw2MCAzNUw1NSA1NVoiIGZpbGw9IiM3OTY0NTIiLz4KICAgIDxjaXJjbGUgY3g9IjQyIiBjeT0iNzAiIHI9IjQiIGZpbGw9IiM1ODUwNEEiLz4KICAgIDxjaXJjbGUgY3g9IjU4IiBjeT0iNzAiIHI9IjQiIGZpbGw9IiM1ODUwNEEiLz4KICAgIDxwYXRoIGQ9Ik01MCA3OEw1MiA4Mkw0OCA4Mkw1MCA3OFoiIGZpbGw9IiM1ODUwNEEiLz4KICA8L2c+CiAgPHBhdGggZD0iTTgwIDMwQzc1IDIwIDYwIDIwIDUwIDMwQzQwIDIwIDI1IDIwIDIwIDMwIiBzdHJva2U9IiNGOUYxOTUiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPg==" />
+    <link rel="apple-touch-icon" type="image/svg+xml"
+        href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjI1IiBmaWxsPSIjNEZCNUQ5Ii8+CiAgPGcgZGVjb3JhdGl2ZT0idHJ1ZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCwgNSkiPgogICAgPHBhdGggZD0iTTUwIDkwQzMwIDkwIDIwIDc1IDI1IDYwQzMwIDQ1IDcwIDQ1IDc1IDYwQzgwIDc1IDcwIDkwIDUwIDkwWiIgZmlsbD0iI0ZGRkVGMiIvPgogICAgPHBhdGggZD0iTTM1IDU1TDQwIDM1TDQ1IDU1Wk02NSA1NUw2MCAzNUw1NSA1NVoiIGZpbGw9IiM3OTY0NTIiLz4KICAgIDxjaXJjbGUgY3g9IjQyIiBjeT0iNzAiIHI9IjQiIGZpbGw9IiM1ODUwNEEiLz4KICAgIDxjaXJjbGUgY3g9IjU4IiBjeT0iNzAiIHI9IjQiIGZpbGw9IiM1ODUwNEEiLz4KICAgIDxwYXRoIGQ9Ik01MCA3OEw1MiA4Mkw0OCA4Mkw1MCA3OFoiIGZpbGw9IiM1ODUwNEEiLz4KICA8L2c+CiAgPHBhdGggZD0iTTgwIDMwQzc1IDIwIDYwIDIwIDUwIDMwQzQwIDIwIDI1IDIwIDIwIDMwIiBzdHJva2U9IiNGOUYxOTUiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPg==" />
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjI1IiBmaWxsPSIjNEZCNUQ5Ii8+CiAgPGcgZGVjb3JhdGl2ZT0idHJ1ZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCwgNSkiPgogICAgPHBhdGggZD0iTTUwIDkwQzMwIDkwIDIwIDc1IDI1IDYwQzMwIDQ1IDcwIDQ1IDc1IDYwQzgwIDc1IDcwIDkwIDUwIDkwWiIgZmlsbD0iI0ZGRkVGMiIvPgogICAgPHBhdGggZD0iTTM1IDU1TDQwIDM1TDQ1IDU1Wk02NSA1NUw2MCAzNUw1NSA1NVoiIGZpbGw9IiM3OTY0NTIiLz4KICAgIDxjaXJjbGUgY3g9IjQyIiBjeT0iNzAiIHI9IjQiIGZpbGw9IiM1ODUwNEEiLz4KICAgIDxjaXJjbGUgY3g9IjU4IiBjeT0iNzAiIHI9IjQiIGZpbGw9IiM1ODUwNEEiLz4KICAgIDxwYXRoIGQ9Ik01MCA3OEw1MiA4Mkw0OCA4Mkw1MCA3OFoiIGZpbGw9IiM1ODUwNEEiLz4KICA8L2c+CiAgPHBhdGggZD0iTTgwIDMwQzc1IDIwIDYwIDIwIDUwIDMwQzQwIDIwIDI1IDIwIDIwIDMwIiBzdHJva2U9IiNGOUYxOTUiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPg==" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700;900&display=swap"
@@ -16,13 +20,21 @@
     <style>
         :root {
             --ac-green: #7DE1A9;
+            /* 淺綠色 */
             --ac-bg-pattern: #8FD8AF;
+            /* 較深的綠色 */
             --ac-cream: #FFFEF2;
+            /* 奶油白 */
             --ac-yellow: #F9F195;
+            /* 淺黃色 */
             --ac-brown: #796452;
+            /* 深棕色 (字體主色) */
             --ac-blue: #4FB5D9;
+            /* 天藍色 */
             --ac-dark: #58504A;
+            /* 暗灰色 */
             --ac-card-border: #E6E0C8;
+            /* 卡片邊框色 */
         }
 
         * {
@@ -34,11 +46,8 @@
 
         body {
             font-family: 'Zen Maru Gothic', sans-serif;
-            background-color: var(--ac-green);
-            /* 更細緻的斜紋背景 */
-            background-image:
-                repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255, 255, 255, 0.2) 20px, rgba(255, 255, 255, 0.2) 40px);
-            min-height: 100vh;
+            /* 軟色系背景取代黑色 */
+            background-color: #f0f7f3;
             color: var(--ac-dark);
             /* 防止 iOS 左右滑動 */
             overflow-x: hidden;
@@ -51,8 +60,8 @@
             justify-content: space-between;
             align-items: center;
             padding: 15px 20px;
-            background: rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
+            /* 改為完全不透明的 AC 綠色 */
+            background: var(--ac-green);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -72,8 +81,9 @@
 
         .update-pill {
             font-size: 0.8rem;
-            color: white;
-            background: rgba(0, 0, 0, 0.2);
+            color: var(--ac-dark);
+            /* 調整文字顏色以適應淺色背景 */
+            background: rgba(255, 255, 255, 0.3);
             padding: 4px 10px;
             border-radius: 12px;
         }
@@ -83,11 +93,14 @@
             max-width: 600px;
             /* 限制在大手機寬度 */
             margin: 0 auto;
+            position: relative;
+            z-index: 10;
         }
 
         /* === 核心：今日焦點卡片 === */
         .hero-card {
             background: var(--ac-cream);
+            /* 實心背景確保文字可讀 */
             border-radius: 35px;
             padding: 30px 25px;
             text-align: center;
@@ -187,11 +200,15 @@
         /* === 稍後預報：橫向滑動區 === */
         .section-title {
             font-size: 1.2rem;
-            color: white;
+            color: var(--ac-dark);
+            /* 調整文字顏色以適應淺色背景 */
             margin-bottom: 15px;
             margin-left: 10px;
             font-weight: 900;
-            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+            text-shadow: none;
+            /* 移除文字陰影 */
+            position: relative;
+            z-index: 10;
         }
 
         .scroll-container {
@@ -202,6 +219,8 @@
             /* 隱藏滾動條但保留功能 */
             scrollbar-width: none;
             -ms-overflow-style: none;
+            position: relative;
+            z-index: 10;
         }
 
         .scroll-container::-webkit-scrollbar {
@@ -259,10 +278,13 @@
 </head>
 
 <body>
+    <!-- 駭客任務背景 Canvas 元素已移除 -->
+
     <div id="loading" class="loading-screen">
         <div style="font-size: 4rem; animation: bounce 2s infinite;">☁️</div>
         <p style="color: white; font-weight: bold; margin-top: 20px;">正在觀測雲的流動...</p>
     </div>
+
     <div class="status-bar">
         <div class="location-pill">📍 新竹縣</div>
         <div id="updateTime" class="update-pill">更新中...</div>
@@ -281,6 +303,8 @@
 
     <script>
         const API_URL = "https://weather-zhubei.zeabur.app/api/weather/kaohsiung";
+
+        // Matrix Rain 相關的 JavaScript 邏輯已移除
 
         function getWeatherIcon(weather) {
             if (!weather) return "🌤️";
@@ -401,7 +425,6 @@
                 const fetchPromise = fetch(API_URL).then(res => res.json());
 
                 // 3. Promise.all 會等待「兩個都完成」才會往下走
-                // result 陣列裡，第一個是 delay 的結果(沒用到)，第二個是 api 的 json 資料
                 const [_, json] = await Promise.all([delayPromise, fetchPromise]);
 
                 if (json.success) {
@@ -410,16 +433,27 @@
                     // 資料處理好後，隱藏 Loading，顯示主畫面
                     document.getElementById('loading').style.display = 'none';
                     document.getElementById('mainContent').style.display = 'block';
+
                 } else {
                     throw new Error("API Error");
                 }
             } catch (e) {
                 console.error(e);
-                alert("天氣資料讀取失敗，狸克把網路線咬斷了！");
+                // 使用客製化 Modal 取代 alert
+                document.getElementById('loading').innerHTML = `
+                    <div style="background: white; padding: 30px; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.2);">
+                        <div style="font-size: 3rem; margin-bottom: 10px;">🚧</div>
+                        <p style="color: var(--ac-dark); font-weight: bold;">天氣資料讀取失敗</p>
+                        <p style="color: #666; font-size: 0.9rem; margin-top: 5px;">狸克把網路線咬斷了！</p>
+                    </div>
+                `;
             }
         }
 
-        document.addEventListener("DOMContentLoaded", fetchWeather);
+        document.addEventListener("DOMContentLoaded", () => {
+            // Matrix setup 已移除
+            fetchWeather(); // 抓取天氣資料
+        });
     </script>
 </body>
 
